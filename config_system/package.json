@@ -1,0 +1,30 @@
+{
+  "name": "zk-govproof",
+  "version": "1.0.0",
+  "description": "Composable Zero-Knowledge Proofs for AI Governance Compliance",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile:circuits": "node scripts/compile-circuits.js",
+    "generate:proof": "node scripts/generate-proof.js",
+    "verify:proof": "node scripts/verify-proof.js",
+    "demo": "node scripts/demo.js",
+    "demo:policy-pack": "node scripts/run-policy-pack.js policies/policy_pack_example.json",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "zero-knowledge",
+    "zk-snarks",
+    "ai-governance",
+    "privacy-preserving"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "snarkjs": "^0.7.4",
+    "circomlibjs": "^0.1.7"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2"
+  }
+}
