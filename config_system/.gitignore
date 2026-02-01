@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+bin/
+
+# Generated data
+data/
+
+# Papers and submissions (work in progress)
+draft.md
+paper.md
+SUBMISSION.md
+project_description.md
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
