@@ -1,0 +1,52 @@
+{
+  "id": "anthropic_rsp_asl3_compliance_v1",
+  "title": "Anthropic RSP ASL-3 Threshold Compliance",
+  "source_note": "Based on Anthropic's Responsible Scaling Policy (Version 2.2, October 2024). Ref: https://www.anthropic.com/responsible-scaling-policy",
+  "legal_reference": "Voluntary commitment, Anthropic RSP v2.2",
+  "effective_date": "2024-10-15",
+  "frameworks": [
+    "Anthropic Responsible Scaling Policy v2.2",
+    "AI Safety Level Standards (ASL-2/ASL-3)"
+  ],
+  "compute_threshold": {
+    "public_threshold_flops": "10000000000000000000000000",
+    "description": "RSP evaluation trigger: Models are tested when they reach 4x the compute of the most recently tested model. This threshold represents a significant capability jump requiring comprehensive safety evaluation before deployment.",
+    "regulatory_consequence": "Triggers mandatory capability threshold evaluation per RSP Section 3"
+  },
+  "required_evaluations": {
+    "N": 5,
+    "required_count_public": "5",
+    "evaluation_names": [
+      "CBRN capabilities evaluation (RSP Section 4.1): Assess if model can meaningfully assist in creating/deploying CBRN weapons",
+      "Cybersecurity capabilities evaluation (RSP Section 4.2): Assess offensive cyber capabilities and vulnerability discovery",
+      "Model Autonomy evaluation (RSP Section 4.3): Assess autonomous AI R&D and self-improvement capabilities",
+      "Persuasion and manipulation evaluation: Assess deceptive persuasion and social engineering capabilities",
+      "Deception and sandbagging evaluation: Assess whether model conceals capabilities during evaluation"
+    ],
+    "description": "RSP mandates comprehensive capability evaluations in CBRN, cyber, and autonomy domains. Evaluations compare model-assisted outcomes versus 2023-baseline resources, assuming attacker has funding and up to one year but no initial specialized expertise."
+  },
+  "policy_checklist": {
+    "N": 8,
+    "min_required_public": "8",
+    "items": [
+      "Responsible Scaling Officer notified of evaluation results",
+      "Internal access controls and clearance levels implemented (ASL-3 Security)",
+      "Model weight protection measures active (ASL-3 Security)",
+      "Multi-tier compartmentalization controls based on asset type",
+      "Red team evaluation completed by internal safety team",
+      "External red team or third-party evaluation conducted",
+      "Capability threshold determination documented and reviewed",
+      "Anonymous staff reporting channel for RSP noncompliance operational"
+    ],
+    "description": "ASL-3 standard requirements for models approaching capability thresholds. Includes enhanced security measures, deployment controls, and governance mechanisms per RSP Section 5."
+  },
+  "example_private_inputs": {
+    "private_compute_flops": "7200000000000000000000000",
+    "evaluation_flags": ["1", "1", "1", "1", "1"],
+    "policy_flags": ["1", "1", "1", "1", "1", "1", "1", "1"]
+  },
+  "notes": {
+    "verification_scope": "This ZK proof verifies that required evaluations were conducted and policy items completed. It does NOT verify: (1) that evaluations correctly assessed model capabilities, (2) that the model is actually safe to deploy, (3) that ASL-2 remains appropriate, (4) quality of security implementations.",
+    "complementary_mechanisms": "Independent capability evaluations (e.g., METR, Apollo), third-party security audits, ongoing 3-month re-evaluation cycle"
+  }
+}

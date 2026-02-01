@@ -1,0 +1,46 @@
+{
+  "id": "example_eu_compute_plus_rsp_v0",
+  "title": "Example: EU compute threshold + minimal RSP checklist (demo pack)",
+  "source_note": "This is a demo 'policy pack' derived from public, high-level requirements (compute threshold + checklist-style commitments). It is not an official legal mapping.",
+  "frameworks": [
+    "EU AI Act (compute threshold concept)",
+    "Responsible Scaling Policy (checklist-style commitments)"
+  ],
+  "compute_threshold": {
+    "public_threshold_flops": "10000000000000000000000000",
+    "description": "Prove training compute is below a public threshold without revealing actual compute."
+  },
+  "required_evaluations": {
+    "N": 5,
+    "required_count_public": "5",
+    "evaluation_names": [
+      "CBRN misuse evaluation completed",
+      "Cyber capabilities evaluation completed",
+      "Persuasion/manipulation evaluation completed",
+      "Autonomy/agentic eval completed",
+      "Deception/sandbagging eval completed"
+    ],
+    "description": "Prove at least k of N evaluation completion flags are 1, without revealing results."
+  },
+  "policy_checklist": {
+    "N": 8,
+    "min_required_public": "8",
+    "items": [
+      "Red teaming performed",
+      "External audit performed",
+      "Incident reporting channel established",
+      "Capability thresholding process in place",
+      "Security measures implemented",
+      "Documentation completed",
+      "Deployment safety review performed",
+      "Post-deployment monitoring enabled"
+    ],
+    "description": "Prove at least m of N policy checklist flags are 1, without revealing internal details."
+  },
+  "example_private_inputs": {
+    "private_compute_flops": "5000000000000000000000000",
+    "evaluation_flags": ["1", "1", "1", "1", "1"],
+    "policy_flags": ["1", "1", "1", "1", "1", "1", "1", "1"]
+  }
+}
+

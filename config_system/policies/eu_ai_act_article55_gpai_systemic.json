@@ -1,0 +1,52 @@
+{
+  "id": "eu_ai_act_article55_systemic_risk_v1",
+  "title": "EU AI Act Article 55 - GPAI Models with Systemic Risk Compliance",
+  "source_note": "Based on EU AI Act Article 55 obligations for providers of general-purpose AI models with systemic risk. Ref: Regulation (EU) 2024/1689, Article 51 and 55.",
+  "legal_reference": "EU AI Act Article 55(1)(a)-(d), Article 51(1)(a)",
+  "effective_date": "2025-08-02",
+  "frameworks": [
+    "EU AI Act (Regulation 2024/1689)",
+    "GPAI Code of Practice (Safety & Security Chapter)"
+  ],
+  "compute_threshold": {
+    "public_threshold_flops": "10000000000000000000000000",
+    "description": "Article 51(2): A GPAI model is presumed to have high impact capabilities when cumulative training compute exceeds 10^25 FLOPs. Providers must notify the Commission within two weeks of reaching or reasonably foreseeing this threshold.",
+    "regulatory_consequence": "Classification as GPAI with systemic risk triggers Article 55 obligations"
+  },
+  "required_evaluations": {
+    "N": 5,
+    "required_count_public": "5",
+    "evaluation_names": [
+      "Article 55(1)(a): Adversarial testing for systemic risk identification",
+      "Article 55(1)(a): Model evaluation using standardised protocols",
+      "Article 55(1)(b): Systemic risk assessment at Union level",
+      "Article 55(1)(c): Serious incident documentation and reporting capability",
+      "Article 55(1)(d): Cybersecurity evaluation of model and infrastructure"
+    ],
+    "description": "Article 55(1) mandates model evaluation including adversarial testing, systemic risk assessment, incident tracking, and cybersecurity protection. Proof demonstrates all required evaluation categories were completed."
+  },
+  "policy_checklist": {
+    "N": 8,
+    "min_required_public": "8",
+    "items": [
+      "Safety and Security Framework established (Code of Practice 3.1)",
+      "Risk inventory and scenario analysis completed (Code of Practice 3.2)",
+      "Pre-market systemic risk assessment performed (Code of Practice 3.3)",
+      "External evaluator or security auditor engaged (Code of Practice 3.4)",
+      "Safety and Security Model Report prepared for AI Office (Code of Practice 3.5)",
+      "Post-market surveillance process established (Code of Practice 3.6)",
+      "Serious incident reporting channel to AI Office operational (Article 55(1)(c))",
+      "Cybersecurity protection measures for model weights implemented (Article 55(1)(d))"
+    ],
+    "description": "GPAI Code of Practice (Safety & Security Chapter) requirements for systemic risk models. Each item corresponds to specific compliance obligations."
+  },
+  "example_private_inputs": {
+    "private_compute_flops": "8500000000000000000000000",
+    "evaluation_flags": ["1", "1", "1", "1", "1"],
+    "policy_flags": ["1", "1", "1", "1", "1", "1", "1", "1"]
+  },
+  "notes": {
+    "verification_scope": "This ZK proof verifies that stated compliance predicates are satisfied. It does NOT verify: (1) quality or rigor of evaluations performed, (2) completeness of risk identification, (3) adequacy of cybersecurity measures, (4) that no unreported training runs exist.",
+    "complementary_mechanisms": "Hardware attestation for compute verification, AI Office audits for evaluation quality, third-party security assessments"
+  }
+}
